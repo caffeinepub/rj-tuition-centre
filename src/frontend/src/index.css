@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* shadcn semantic tokens — mapped to brand palette */
+    --background: 0.99 0.005 91;
+    --foreground: 0.23 0.02 258;
+    --card: 0.99 0.005 91;
+    --card-foreground: 0.23 0.02 258;
+    --popover: 0.99 0 0;
+    --popover-foreground: 0.23 0.02 258;
+    --primary: 0.33 0.093 244;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.97 0.05 88;
+    --secondary-foreground: 0.23 0.02 258;
+    --muted: 0.96 0.022 228;
+    --muted-foreground: 0.53 0.018 260;
+    --accent: 0.82 0.15 84;
+    --accent-foreground: 0.23 0.02 258;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.91 0.015 228;
+    --input: 0.91 0.015 228;
+    --ring: 0.52 0.12 238;
+    --chart-1: 0.52 0.12 238;
+    --chart-2: 0.82 0.15 84;
+    --chart-3: 0.72 0.17 155;
+    --chart-4: 0.33 0.093 244;
+    --chart-5: 0.65 0.1 240;
+    --sidebar: 0.33 0.093 244;
+    --sidebar-foreground: 0.99 0 0;
+    --sidebar-primary: 0.82 0.15 84;
+    --sidebar-primary-foreground: 0.23 0.02 258;
+    --sidebar-accent: 0.29 0.09 246;
+    --sidebar-accent-foreground: 0.99 0 0;
+    --sidebar-border: 0.4 0.08 246;
+    --sidebar-ring: 0.82 0.15 84;
+    /* Brand custom props */
+    --brand-navy: 0.33 0.093 244;
+    --brand-navy-dark: 0.29 0.09 246;
+    --brand-blue: 0.52 0.12 238;
+    --brand-yellow: 0.82 0.15 84;
+    --brand-lightblue: 0.96 0.022 228;
+    --brand-lightyellow: 0.97 0.05 88;
+    --brand-cream: 0.98 0.025 91;
+    --brand-dark: 0.23 0.02 258;
+    --brand-muted: 0.53 0.018 260;
+    --brand-whatsapp: 0.72 0.17 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.33 0.093 244) 0%,
+    oklch(0.52 0.12 238) 100%
+  );
+}
+
+/* Section backgrounds */
+.bg-section-blue {
+  background-color: oklch(0.96 0.022 228);
+}
+.bg-section-yellow {
+  background-color: oklch(0.97 0.05 88);
+}
+.bg-cream {
+  background-color: oklch(0.98 0.025 91);
+}
+
+/* Admin sidebar */
+.admin-sidebar {
+  background-color: oklch(0.33 0.093 244);
+}
